@@ -1,0 +1,1 @@
+SELECT users_id, birthday, IFNULL((SELECT SUM((SELECT COUNT(*) FROM vk.likes WHERE media_id = media.id)) AS media_likes FROM vk.media WHERE users_id = profiles.users_id),0) AS likes FROM vk.profiles ORDER BY birthday DESC LIMIT 10;

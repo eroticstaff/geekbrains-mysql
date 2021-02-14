@@ -1,0 +1,1 @@
+SELECT gender, SUM((SELECT COUNT(*) FROM vk.likes WHERE users_id = profiles.users_id)) as likes FROM vk.profiles GROUP BY gender ORDER BY likes DESC;
