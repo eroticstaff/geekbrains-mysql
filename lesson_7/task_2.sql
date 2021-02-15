@@ -1,0 +1,1 @@
+SELECT products.name, catalogs.name FROM products JOIN catalogs ON catalogs.id = products.catalogs_id
