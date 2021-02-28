@@ -1,0 +1,2 @@
+-- Full product information
+SELECT product_id, p.`name`, c.name as category, s.name as seller, price, description, equipment  FROM ozon.products p JOIN product_describe pd ON p.product_id = pd.products_id JOIN categories c ON p.categories_id = c.category_id JOIN sellers s ON s.id = pd.sellers_id;

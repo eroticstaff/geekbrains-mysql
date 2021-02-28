@@ -1,0 +1,1 @@
+SELECT id FROM vk.users WHERE (SELECT DISTINCT users_id FROM vk.orders WHERE (SELECT COUNT(*) FROM vk.orders WHERE users_id = users.id) > 0 AND users_id=users.id) IS NOT NULL
